@@ -20,6 +20,6 @@ public class WordsInSent {
             i++;
         }
 
-        System.out.println(count);
+        System.out.println("Count : "+count);
     }
 }
