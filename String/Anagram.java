@@ -1,32 +1,51 @@
 package String;
 
+import java.util.ArrayList;
+
 public class Anagram {
     public static void main(String[] args) {
 
         String s1 = "listen";
         String s2 = "silent";
-        System.out.println(areAnagrams(s1, s2));
-    }
+     
+        ArrayList<Character> list1 = new ArrayList<>();
+        ArrayList<Character> list2 = new ArrayList<>();
 
-        public static boolean areAnagrams(String str1, String str2) {
-            if (str1.length() != str2.length()) {
-                return false;
-            }
+        boolean flag = true;
 
-            int[] charCount = new int[256]; // Assuming ASCII character set
+        if(s1.length() == s2.length())
+        {
+            flag = false;
+        }
 
-            for (int i = 0; i < str1.length(); i++) {
-                charCount[str1.charAt(i)]++;
-                charCount[str2.charAt(i)]--;
-            }
+        for(char ch : s1.toCharArray())
+        {
+            list1.add(ch);
+        }
 
-            for (int count : charCount) {
-                if (count != 0) {
-                    return false;
-                }
-            }
+        for(char ch : s2.toCharArray())
+        {
+            list2.add(ch);
+        }
 
-            return true;
+        if(!list1.containsAll(list2))
+        {
+            flag = false;
+        }
+        else
+        {
+            flag = true;
+        }
+
+        if(flag)
+        {
+            System.out.println("Anagram");
+        }
+        else
+        {
+            System.out.println("Not Anagram");
+        }
+
         
     }
 }
