@@ -8,7 +8,7 @@ public class WordRepeat {
         sentence = sentence.toLowerCase().replaceAll("[^a-z ]", "");
         String[] words = sentence.split("\\s+");
 
-        String target = "you";
+        String target = "what";
         int count = 0;
 
         for(String str : words)
