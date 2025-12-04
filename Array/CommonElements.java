@@ -3,6 +3,8 @@ package Array;
 public class CommonElements {
     public static void main(String[] args) {
         
+        //Find common elements between two arrays.
+        
         int[] arr1 = {1,2,3,4};
         int[] arr2 = {4,5,6,2,7};
 
