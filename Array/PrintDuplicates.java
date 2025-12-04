@@ -1,0 +1,16 @@
+package Array;
+public class PrintDuplicates {
+
+    public static void main(String[] args) {
+        
+        int[] numbers = {1,3,4,4,5,6,6,8};
+
+        for(int i = 0; i < numbers.length - 1; i++)
+        {
+            if(numbers[i] == numbers[i + 1])
+            {
+                System.out.println(numbers[i] + " ");
+            }
+        }
+    }
+}
