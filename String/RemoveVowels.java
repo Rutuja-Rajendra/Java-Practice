@@ -5,11 +5,8 @@ public class RemoveVowels {
         
         String word = "Program";
 
-        String result = "";
+        String result = word.replaceAll("[AEIOUaeiou]", "");
 
-        for(char ch : word.toCharArray())
-        {
-            
-        }
+        System.out.println(result);
     }
 }
