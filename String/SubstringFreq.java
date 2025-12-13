@@ -11,9 +11,16 @@ public class SubstringFreq {
 
         int freq = 0;
 
-        for(int i = 0; i < word.length(); i++)
+        for(int i = 0; i <= word.length() - substring.length(); i++)
         {
             
+            if(word.subSequence(i, i + substring.length()).equals(substring))
+            {
+                freq++;
+            
+            }    
         }
+
+        System.out.println(freq);
     }
 }
